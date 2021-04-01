@@ -1,0 +1,22 @@
+#navigation {
+    list-style: none;
+    background:white;
+    overflow: hidden;
+    width: 500px;
+}
+#navigation li {
+    float: left;
+    border-right: solid 1 white;
+    height: 35px;
+}
+#navigation li a:link, #navigation li a:visited {
+    text-decoration: none;
+    display: block;
+    height: 35px;
+    color: black;
+    line-height: 35px;
+    padding: 0 10px 0 10px;
+    border-right: solid 1px#666;
+    font-size: 20px;
+    font-weight: bold;
+}
