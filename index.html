@@ -13,9 +13,45 @@
     <link rel="manifest" href="/site.webmanifest">
 </head>
 <style>
-    .recepies{
-        font-size: 30px;
+    h1{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
     }
+    .recepies{
+        font-size: 40px;
+        text-align: center;
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
+    .appetizers{
+        background-color:lightblue;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .app-title{
+        font-size: 30px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        margin-left: 15%;
+    }
+    .lumpia{
+        text-align: center;
+        margin-right: 5%;
+        margin-left: 15%;
+        float: left;
+    }
+    .shumai{
+        text-align: center;
+        margin-right: 5%;
+        margin-left: 5%;
+        float: left;
+    }
+    .ukoy{
+        text-align: center;
+        margin-left: 5%;
+    }
+    
 </style>
 <body>
     <ul id="navigation">
@@ -24,46 +60,47 @@
         <li><a href="sitemap.html">links</a></li>
     </ul>
 
-    <H1>How to Make Philipino Food</H1>
-
-    <table>
-        <tr>
-            <td class="recepies">Recepies</td>
-        </tr>
-        <hr>
-        <tr>
-            <td rowspan="1" colspan="1">Appetizers</td>
-            <td rowspan ="1" colspan="3">Main Dishes</td>
-        </tr>
-        <tr>
-            <td rowspan="2" colspan= "1">
+    <h1>How to Make Philipino Food</h1>
+    <hr>
+    <p class="recepies"> Recepies </p>
+    <hr>
+    <div class="appetizers">
+        <div class="app-title"><b>Appetizers</b></div>
+        <div>
+            <div class="lumpia">        
                 <img 
                 src="images/Lumpia.1.webp"
                 alt ="Lumpia placeholder"
                 title ="Lumpia"
                 width="200"
                 />
-                <br/>
-                <li><a href="lumpia.html"> Lumpia </a></li>
-                <li><a href="shumai.html">Siomai</a></li> 
-                <li><a href="ukoy.html">Ukoy </a></li>
-            </td>
-        </tr>
-        <tr>
-            <td rowspan= "2"colspan="3">
-                <li>Pancit</li> 
-                <li>adobbo</li> 
-                <li>Beef Steak</li> 
-                <li>ginataang Salmon </li>
-                <img 
-                src="images/adobo1.jpeg" 
-                alt="Adobbo placeholder"
-                title ="Adobbo"
-                width="200"
-                >
-            </td>
-        </tr>
+                <br>
+                <a href="lumpia.html"> Lumpia </a>
+            </div>
+            <div class="shumai">      
+                <img
+                src="images/shumai.jpg"
+                alt="shumai placeholder"
+                title="Siomai"
+                width="267"
+                />
+                <br>
+                <a href="shumai.html">Siomai</a>
+            </div> 
+            <div class="ukoy">
+                <img
+                src="images/shumai.jpg"
+                alt="ukoy placeholder"
+                title="Siomai"
+                width="267"
+                />
+                <br>
+                <a href="ukoy.html">Ukoy</a>
+            </div>
+        </div>
+    </div>
 
-    </table>
+
+
 </body>
 </html>
