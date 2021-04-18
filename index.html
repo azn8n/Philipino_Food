@@ -1,107 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index Page</title>
-    <meta name ="keywords" content ="HTML, Links, Food, Philipino Food, How to make, Asian Food, How to make Asian Food"/>
-    <meta name ="description" content="How to Make Philipino Food"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="stylesheet" href="styles/navbar.css"/>
-</head>
-<style>
-    h1{
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
+    <meta
+      name="keywords"
+      content="HTML, Links, Food, Philipino Food, How to make, Asian Food, How to make Asian Food"
+    />
+    <meta name="description" content="How to Make Philipino Food" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="docs/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="docs/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="docs/favicon-16x16.png"
+    />
+    <link rel="manifest" href="docs/site.webmanifest" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
     }
-    .recepies{
-        font-size: 40px;
-        text-align: center;
-        padding-top: 0%;
-        padding-bottom: 0%;
+    h1 {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
     }
-    .appetizers{
-        background-color:lightblue;
-        margin-right: auto;
-        margin-left: auto;
+    .recipes {
+      font-size: 40px;
+      text-align: center;
+      padding-top: 0%;
+      padding-bottom: 0%;
     }
-    .app-title{
-        font-size: 30px;
-        padding-top: 10px;
-        padding-bottom: 20px;
-        margin-left: 15%;
+    .accordion {
+      font-size: 30px;
+      background-color: burlywood;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      border: none;
     }
-    .lumpia{
-        text-align: center;
-        margin-right: 5%;
-        margin-left: 15%;
-        float: left;
+    .active,
+    .accordion:hover {
+      background-color: green;
+      text-align: center;
     }
-    .shumai{
-        text-align: center;
-        margin-right: 5%;
-        margin-left: 5%;
-        float: left;
+    .content {
+      padding: 20px;
+      text-align: center;
+      overflow: hidden;
+      background: darkkhaki;
     }
-    .ukoy{
-        text-align: center;
-        margin-left: 5%;
+
+    .column {
+      width: 33.3%;
+      float: left;
+      padding: 5px;
     }
-    
-</style>
-<body>
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  </style>
+  <body>
+    <!-- navigation bar -->
     <ul id="navigation">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="sitemap.html">links</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="sitemap.html">links</a></li>
     </ul>
 
     <h1>How to Make Philipino Food</h1>
-    <hr>
-    <p class="recepies"> Recepies </p>
-    <hr>
-    <div class="appetizers">
-        <div class="app-title"><b>Appetizers</b></div>
-        <div>
-            <div class="lumpia">        
-                <img 
-                src="images/Lumpia.1.webp"
-                alt ="Lumpia placeholder"
-                title ="Lumpia"
-                width="200"
-                />
-                <br>
-                <a href="lumpia.html"> Lumpia </a>
-            </div>
-            <div class="shumai">      
-                <img
-                src="images/shumai.jpg"
-                alt="shumai placeholder"
-                title="Siomai"
-                width="267"
-                />
-                <br>
-                <a href="shumai.html">Siomai</a>
-            </div> 
-            <div class="ukoy">
-                <img
-                src="images/shumai.jpg"
-                alt="ukoy placeholder"
-                title="Siomai"
-                width="267"
-                />
-                <br>
-                <a href="ukoy.html">Ukoy</a>
-            </div>
+    <hr />
+    <p class="recipes">Recipes</p>
+    <hr />
+
+    <button type="button" id="appetizer" class="accordion">Appetizers</button>
+    <div id="content" class="content">
+      <div class="row">
+        <div class="column">
+          <img
+            src="images/Lumpia.1.webp"
+            alt="Lumpia placeholder"
+            title="Lumpia"
+            width="200"
+          />
+          <br />
+          <a href="recipes/lumpia.html"> Lumpia </a>
         </div>
+        <div class="column">
+          <img
+            src="images/shumai.jpg"
+            alt="shumai placeholder"
+            title="Siomai"
+            width="267"
+          />
+          <br />
+          <a href="recipes/shumai.html">Siomai</a>
+        </div>
+        <div class="column">
+          <img
+            src="images/shumai.jpg"
+            alt="ukoy placeholder"
+            title="Siomai"
+            width="267"
+          />
+          <br />
+          <a href="recipes/ukoy.html">Ukoy</a>
+        </div>
+      </div>
     </div>
-
-
-
-</body>
+    <button type="button" id="main_dishes" class="accordion">
+      Main Dishes
+    </button>
+    <div id="content" class="content">
+      <div class="row">
+        <div class="column">
+          <img
+            src="images/Lumpia.1.webp"
+            alt="Lumpia placeholder"
+            title="Lumpia"
+            width="200"
+          />
+          <br />
+          <a href="recipes/adobo.html">Adobo</a>
+        </div>
+        <div class="column">
+          <img
+            src="images/Lumpia.1.webp"
+            alt="Lumpia placeholder"
+            title="Lumpia"
+            width="200"
+          />
+          <br />
+          <a href="recipes/beef_steak.html">Beef Steak</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function collapsible() {
+      //expands and shrinks content
+      this.classList.toggle("active");
+      let content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    }
+    document.getElementById("appetizer").onclick = collapsible;
+    document.getElementById("main_dishes").onclick = collapsible;
+  </script>
 </html>

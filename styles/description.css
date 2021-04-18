@@ -12,11 +12,17 @@ h2{
 }
 .description{
     padding-bottom: 20px;
+    width: 700px;
+    margin: auto;
 }
 .ingredients{
     background-color:rgb(255, 132, 132) ;
     padding-bottom: 10px;
     padding-top: 5px;
+}
+.ingredients_list{
+    width: 275px;
+    margin: 0 auto;
 }
 li{
     padding-bottom: 5px;
