@@ -1,34 +1,73 @@
-.picture1{
-    text-align: center;
-    background-color:lightblue;
-    padding-bottom: 30px;
-    padding-top: 5px;
+.picture1 {
+  text-align: center;
+  background-color: #77c9d4;
+  padding-bottom: 30px;
+  padding-top: 5px;
+  color: white;
 }
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
-h2{
-    text-align: center;
+h2 {
+  text-align: center;
 }
-.description{
-    padding-bottom: 20px;
-    width: 700px;
-    margin: auto;
+.description_background {
+  background-color: #57bc90;
 }
-.ingredients{
-    background-color:rgb(255, 132, 132) ;
-    padding-bottom: 10px;
-    padding-top: 5px;
+.grad1 {
+  height: 50px;
+  background-color: white; /* For browsers that do not support gradients */
+  background-image: linear-gradient(white, #77c9d4);
 }
-.ingredients_list{
-    width: 275px;
-    margin: 0 auto;
+.grad2 {
+  height: 50px;
+  background-color: #77c9d4; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#77c9d4, #57bc90);
 }
-li{
-    padding-bottom: 5px;
+.grad3 {
+  height: 100px;
+  background-color: #57bc90; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#57bc90, white);
+}
+.description {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 700px;
+  margin: auto;
+  background-color: #57bc90;
+  color: white;
+}
+.ingredients {
+  background-color: #57bc90;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  color: white;
+}
+.ingredients_list {
+  width: 275px;
+  margin: 0 auto;
+}
+li {
+  padding-bottom: 5px;
 }
 .instructions {
-    background-color: lightblue;
-    padding-bottom: 10px;
-    padding-top: 5px;
+  background-color: #57bc90;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  color: white;
+}
+.instructions_list {
+  width: 400px;
+  margin: 0 auto;
+}
+.previousR{
+  text-align: center;
+  padding-top: 5%;
+  font-size: 30px;
+}
+.nextR{
+  text-align: center;
+  padding-top: 10px;
+  font-size: 30px;
+  padding-bottom: 20px;
 }

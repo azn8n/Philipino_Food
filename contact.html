@@ -29,43 +29,117 @@
     />
     <link rel="manifest" href="docs/site.webmanifest" />
     <link rel="stylesheet" href="styles/navbar.css" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="styles/navbar.css" />
   </head>
-  <body>
-    <ul id="navigation">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="sitemap.html">links</a></li>
-    </ul>
-    <div>
-      <h1>Have Any Questions? Contact ME!</h1>
-      <form method="POST" action="mailto:aasuncionduong1@babson.edu"></form>
-    </div>
-    <div>
-      <label for="name"> Your Name</label>
-      <input
-        type="text"
-        id="name"
-        name="n"
-        placeholder="enter your name here"
-      />
-    </div>
-    <div>
-      <label for="email"> Email: </label>
-      <input type="text" id="email" name="email" placeholder="Email" />
-    </div>
-    <div>
-      <label for="message"> Write a Message</label>
-      <div>
-        <textarea
-          id="message"
-          name="message"
-          rows="8"
-          cols="40"
-          placeholder="Write your message here"
-        ></textarea>
+  <style>
+    body {
+      font-family: Apple Chancery, cursive;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* Style inputs */
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    
+    input[type=submit] {
+      background-color: royalblue;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      float:right;
+      margin-right: 20%;
+      transition: 0.3s;
+    }
+    
+    input[type=submit]:hover {
+      background-color:goldenrod;
+    }
+    
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+    
+    .column {
+      float: left;
+      width: 50%;
+      margin-top: 6px;
+      padding: 20px;
+      padding-right: 10%;
+    }
+    
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    img{
+      padding-top: 30px;
+      padding-bottom: 20px;
+      width: 100%;
+      
+    }
+    
+    </style>
+    </head>
+    <body>
+      <ul id="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="sitemap.html">links</a></li>
+      </ul>
+    <div class="container">
+      <div style="text-align:center">
+        <h2>Contact Me</h2>
+        <p>Leave a review or send me a message:</p>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="images/filipino_flag.png" title="filipino flag" alt="filipino flag">
+        </div>
+        <div class="column">
+          <form id="myForm" method="post" action="mailto:aasuncionduong1@babson.edu" enctype="text/plain">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name">
+            <label for="email">Your Email:</label>
+            <input type="text" id="email" name="email" placeholder="Your email">
+            <label for="subject">Message:</label>
+            <textarea id="subject" name="subject" placeholder="Write a message" style="height:170px"></textarea>
+            <input id ="submit" type="submit" value="Submit">
+          </form>
+        </div>
       </div>
     </div>
-  </body>
+    </body>
+    <script>
+    function validate() {
+
+      let name = document.getElementById("yname").value;
+      let email = document.getElementById("email").value;
+      let subject = document.getElementById("subject").value;
+
+      console.log("name:", name);
+
+      if (name.length == 0) {
+        alert("enter your name");
+      }
+      if (email.length == 0) {
+        alert("emter your email")
+      }
+      if (subject.length == 0) {
+        alert("write a message")
+      }
+    }
+      document.getElementById("submit").onclick = validate;
+    </script>
 </html>

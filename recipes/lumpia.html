@@ -31,28 +31,52 @@
     <link rel="stylesheet" href="../styles/description.css" />
     <link rel="stylesheet" href="../styles/navbar.css" />
   </head>
+  <style>
+    .lumpiaPic {
+      width: 40%;
+      margin: auto;
+    }
+    .slide {
+      text-align: center;
+      margin: auto;
+    }
+    a {
+      font-family: Apple Chancery, cursive;
+      font-size: 25px;
+      color: blue;
+    }
+    a:link {
+      text-decoration: none;
+    }
+    a:visited {
+      text-decoration: none;
+    }
+  </style>
   <body>
     <ul id="navigation">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../contact.html">Contact</a></li>
       <li><a href="../sitemap.html">links</a></li>
     </ul>
+    <div class="grad1"></div>
     <div class="picture1">
       <h1>Lumpia</h1>
       <img
-        src="images/Lumpia.1.webp"
+        src="../images/Lumpia.1.webp"
         alt="Lumpia placeholder"
         title="Lumpia"
         width="300"
       />
     </div>
-    <div class="description">
-      <h2>Description</h2>
-      Lumpia is a common spring roll found in all parts of the philippines. They
-      are made with a paper think like wrapping filled with minced meat and
-      vegetables.
+    <div class="grad2"></div>
+    <div class="description_background">
+      <div class="description">
+        <h2>Description</h2>
+        Lumpia is a common spring roll found in all parts of the philippines.
+        They are made with a paper think like wrapping filled with minced meat
+        and vegetables.
+      </div>
     </div>
-
     <div class="ingredients">
       <h2>Ingredients</h2>
       <div class="ingredients_list">
@@ -69,37 +93,91 @@
     </div>
     <div class="instructions">
       <h2>Instructions</h2>
-      <p>1. Open and drain water Chestnuts, wash and peel carrots</p>
-      <p>2. cut water chestnuts and carrots into 3mm cubes</p>
-      <p>
-        3. put ground pork into large bowl and use hands or fork to mash meat
-      </p>
-      <p>4. Add soy sauce, galric salt, and black pepper to meat mix</p>
-      <p>5. add vegetables to mashed meat and mix</p>
-      <p>6. cook a small amount of meat using a frying pan and taste</p>
-      <p>7. adjust seasoning as desired and repeat step 6 to taste</p>
-      <br />
-      <h3>How to roll Lumpia</h3>
-      <p>1. Open lumpia wrapper and separate one layer</p>
-      <p>
-        2. Layer should be flat and square shaped like a large origami paper
-      </p>
-      <p>
-        3. Use a spoon or fork to place a log of meat at the edge of the
-        wrapper, log should be about the width of your index finger
-      </p>
-      <p>4. Roll the wrapper starting at the side where the meat is placed</p>
-      <p>
-        5. Once you reach the opposite edge use your finger to spread water
-        along the wrapper
-      </p>
-      <p>
-        6. roll over edge of wrapper to seal edges or else the roll will open
-      </p>
-      <p>
-        7. cut meat longs into fourths and fry in vegetable oil, make sure heat
-        is not too high or else the lumpia will burst open
-      </p>
+      <div class="slide">
+        <img
+          class="lumpiaPic"
+          id="lumpiaPic"
+          src="../images/lumpia1.jpg"
+          alt="images"
+        />
+      </div>
+      <div class="instructions_list">
+        <h3>Preparing Ingredients</h3>
+        <p>1. Open and drain water Chestnuts, wash and peel carrots</p>
+        <p>2. Cut water chestnuts and carrots into 3mm cubes</p>
+        <p>
+          3. Put ground pork into large bowl and use hands or fork to mash meat
+        </p>
+        <p>4. Add soy sauce, galric salt, and black pepper to meat mix</p>
+        <p>5. Add vegetables to mashed meat and mix</p>
+        <p>6. Cook a small amount of meat using a frying pan and taste</p>
+        <p>7. Adjust seasoning as desired and repeat step 6 to taste</p>
+        <br />
+        <h3>How to roll Lumpia</h3>
+        <p>1. Open lumpia wrapper and separate one layer</p>
+        <p>
+          2. Layer should be flat and square shaped like a large origami paper
+        </p>
+        <p>
+          3. Use a spoon or fork to place a log of meat at the edge of the
+          wrapper, log should be about the width of your index finger
+        </p>
+        <p>4. Roll the wrapper starting at the side where the meat is placed</p>
+        <p>
+          5. Once you reach the opposite edge use your finger to spread water
+          along the wrapper
+        </p>
+        <p>
+          6. Roll over edge of wrapper to seal edges or else the roll will open
+        </p>
+        <p>
+          7. Cut meat longs into fourths and fry in vegetable oil, make sure
+          heat is not too high or else the lumpia will burst open
+        </p>
+        <br/>
+        <h3>Frying the Lumpia</h3>
+        <p>1. Heat hot oil in a a small pot</p>
+        <p>
+          2. Once the oil is hot, place several pieces of lumpia into the oil,
+          be careful not to over crowd or else the oil temperature will drop
+        </p>
+        <p>
+          3. Once the lumpia is crispy golden brown, remove lumpia from
+          oil and serve
+        </p>
+      </div>
+    </div>
+    <div class="grad3"></div>
+    <div>
+      <div class="previousR" >
+        <a id="previousR" href="pancit.html">Previous Recipe</a>
+      </div>
+      <div class="nextR" ><a id="nextR" href="shumai.html">Next Recipe</a></div>
     </div>
   </body>
+  <script src="../next.js"></script>
+  <script>
+    const slides = [
+      "../images/lumpia1.jpg",
+      "../images/lumpia2.jpg",
+      "../images/lumpia3.jpg",
+      "../images/lumpia4.jpg",
+      "../images/lumpia5.jpg",
+      "../images/lumpia6.jpg",
+    ];
+
+    let i = 0;
+
+    function slideShow() {
+      let lumpiaPic = document.getElementById("lumpiaPic");
+      if (i === slides.length) {
+        i = 0;
+      }
+      lumpiaPic.src = slides[i];
+      i++;
+
+      setTimeout(slideShow, 2300);
+    }
+    document.querySelector("body").onload = slideShow;
+  </script>
 </html>
